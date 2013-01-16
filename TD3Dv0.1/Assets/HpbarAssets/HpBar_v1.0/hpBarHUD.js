@@ -1,8 +1,6 @@
     var target : Transform;
     
     var texture : Texture;
-
-    var cameraObject : GameObject; 
     
     function Update (){	
 		 gameObject.guiTexture.texture = texture;
