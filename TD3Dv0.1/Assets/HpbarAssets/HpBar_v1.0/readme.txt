@@ -56,3 +56,10 @@ Add hpBar and hpBarHUD scripts to GUITexture object and set transform target;
 
 If the hp bar is not visible set Camera object tag to main camera cause this hp Bar gui is relative to MAIN camera.
 
+Version: 1.1
+
+Updates:
+Functions changed to be more atomic.
+Health level is more scalable 
+Added "AddHP" and "SubtractHP" functions which allow us to dynamicly change health level w/o loosing current level of hp.
+
