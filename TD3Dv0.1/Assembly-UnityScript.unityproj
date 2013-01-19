@@ -49,8 +49,11 @@
      <Compile Include="Assets\HpbarAssets\HpBar_v1.0\hpBarHUD.js" />
      <Compile Include="Assets\HpbarAssets\Move2Point\FollowObject.js" />
      <Compile Include="Assets\HpbarAssets\Move2Point\Move2Point.js" />
+     <Compile Include="Assets\HpbarAssets\OtherScripts\DestroyObjectIfDead.js" />
+     <Compile Include="Assets\HpbarAssets\OtherScripts\SimpleCollisionDetection.js" />
      <Compile Include="Assets\HpbarAssets\OtherScripts\State.js" />
      <Compile Include="Assets\HpbarAssets\SpawnerScripts\SpawnEnemies.js" />
+     <Compile Include="Assets\HpbarAssets\TurretAttack\DealDamage.js" />
      <Compile Include="Assets\HpbarAssets\TurretAttack\NormalAttack.js" />
      <None Include="Assets\HpbarAssets\HpBar_v1.0\readme.txt" />
   </ItemGroup>
