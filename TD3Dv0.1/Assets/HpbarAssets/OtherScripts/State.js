@@ -1,18 +1,18 @@
 #pragma strict
 
-var isAttackable : boolean;
-
 enum TYPE {Turret,Enemy,Spawner,Enviorment,Effect};
 
-var type : TYPE;
+var isAttackable : boolean; // true if object can be attacked
 
-var maxHP : float = 100;
+var type : TYPE; // type of object
 
-var currentHP : float = 100;
+var maxHP : float = 100; // maximum value of health
+
+var currentHP : float = 100; // current level of health
     
-var decreaseByDamage  : float;
+var decreaseByDamage  : float; // write to decrease health
     
-var increaseByDamage  : float;
+var increaseByDamage  : float; // write to increas health
 
 function Update () {
 SubtractHP(Mathf.Abs(decreaseByDamage));

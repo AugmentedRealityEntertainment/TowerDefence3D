@@ -3,7 +3,7 @@ var projectilePrefab : GameObject;
 
 var currentTarget : GameObject;
 
-var reloaded : boolean;
+var reloaded : boolean ;
 
 var shotsPerSec : float = 1.0;
 
@@ -16,6 +16,7 @@ if(gameObject.GetComponent(DetectObjectInRange)!=null){
 	if (target!=null){
 		Shoot(target);
 	}
+	currentTarget = null;
 }
 else{
 	Debug.Log("DetectObjectInRange <- Component not found");
@@ -24,8 +25,6 @@ else{
 
 var time = 1/shotsPerSec;
 function Shoot (target : GameObject) {
-
-
 if(reloaded == true){
 	reloaded = false;
 	Debug.Log(gameObject.name + " - Ready");
