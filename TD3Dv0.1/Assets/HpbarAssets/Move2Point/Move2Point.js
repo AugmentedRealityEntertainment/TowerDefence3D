@@ -3,7 +3,7 @@ var currentPosition : Vector3;
 
 var destinationPositions : Vector3[];
 
-var movementSpeed : float = 0.1;
+var movementSpeed : float = 1;
 
 var indexOfDestination : int;
 
@@ -17,11 +17,8 @@ currentPosition = gameObject.transform.position;
 
 var movementVector = destinationPositions[indexOfDestination] - currentPosition;
 
-movementVector.x = movementVector.x * Time.deltaTime * movementSpeed;
-movementVector.y = 0;//movementVector.y * Time.deltaTime * movementSpeed;
-movementVector.z = movementVector.z * Time.deltaTime * movementSpeed;
-
-gameObject.transform.Translate(movementVector);
+//normalized vector fix different movement speed on different distance
+gameObject.transform.Translate(movementVector.normalized * Time.deltaTime * movementSpeed);
 
 destinationReached = checkIfDestinationIsReached(epsilon);
 	if (destinationReached){

@@ -14,7 +14,7 @@
      
           var obj : GameObject = enemyPrefabs[Random.Range(0, enemyPrefabs.length)]; // Randomize the different enemies to instantiate.
           var pos: Transform = spawnPoints[Random.Range(0, spawnPoints.length)];  // Randomize the spawnPoints to instantiate enemy at next.
-     
+          
           Instantiate(obj, pos.position, pos.rotation);
        }
     }

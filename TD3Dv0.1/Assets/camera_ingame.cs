@@ -21,7 +21,8 @@ public class camera_ingame : MonoBehaviour
 	{
 		if(Input.anyKeyDown)
 		{
-			GameObject.Find("Camera").GetComponent<SmoothLookAt>().target = null;
+			if(gameObject.GetComponent<SmoothLookAt>() != null)
+				gameObject.GetComponent<SmoothLookAt>().target = null;
 		}
 		if(Input.GetKey(KeyCode.W))
 		{

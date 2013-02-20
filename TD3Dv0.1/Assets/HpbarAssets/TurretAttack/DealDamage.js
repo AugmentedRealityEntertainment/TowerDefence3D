@@ -17,7 +17,3 @@ if (theCollision.gameObject.GetComponent(State)!=null){
 	}
 }
 }
-
-function Update (){
-Destroy(gameObject,2);
-}

@@ -21,7 +21,7 @@ var i : int;
 												" at point " + arrayOfCollisions[i].gameObject.transform.position.x + ","
 															 + arrayOfCollisions[i].gameObject.transform.position.y + ","
 															 + arrayOfCollisions[i].gameObject.transform.position.z);
-				Debug.DrawRay(gameObject.transform.position,arrayOfCollisions[i].gameObject.transform.position - gameObject.transform.position, Color.green);
+				Debug.DrawRay(gameObject.transform.position,arrayOfCollisions[i].gameObject.transform.position - gameObject.transform.position, Color.red);
 				}
 			currentTarget = arrayOfCollisions[i].gameObject;
 			}

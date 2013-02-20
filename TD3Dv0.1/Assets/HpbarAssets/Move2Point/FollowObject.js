@@ -24,13 +24,11 @@ var movementVector = destinationPosition - currentPosition;
 
 if (Vector3.Distance(currentPosition,destinationPosition) >= distanceBetweenObjects)
 {
-	movementVector.x = movementVector.x * Time.deltaTime * movementSpeed;
-	if (allowVerticalFollowing){
-		movementVector.y = movementVector.y * Time.deltaTime * movementSpeed;
-	}else{
+	movementVector = movementVector.normalized * Time.deltaTime * movementSpeed;
+
+	if (allowVerticalFollowing == false){
 		movementVector.y = 0;
 	}
-	movementVector.z = movementVector.z * Time.deltaTime * movementSpeed;
 }
 else
 {
@@ -38,6 +36,9 @@ else
 	movementVector.y = 0;
 	movementVector.z = 0;
 }
+}
+else{
+Destroy(gameObject);
 }
 
 
