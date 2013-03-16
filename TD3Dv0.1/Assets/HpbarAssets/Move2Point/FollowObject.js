@@ -9,39 +9,24 @@ var followedObject : GameObject = null;
 
 var distanceBetweenObjects : float;
 
-var allowVerticalFollowing : boolean = false;
-
 private var epsilon :float = 0.031;
 
-function Update () {
+function Update ()
+{
 currentPosition = gameObject.transform.position;
 
-if (followedObject!=null){
-destinationPosition = followedObject.transform.position;
-
-
-var movementVector = destinationPosition - currentPosition;
-
-if (Vector3.Distance(currentPosition,destinationPosition) >= distanceBetweenObjects)
+if (followedObject!=null)
 {
-	movementVector = movementVector.normalized * Time.deltaTime * movementSpeed;
+	destinationPosition = followedObject.transform.position;
 
-	if (allowVerticalFollowing == false){
-		movementVector.y = 0;
-	}
+	gameObject.transform.LookAt(destinationPosition);
+
+	if (Vector3.Distance(currentPosition,destinationPosition) >= distanceBetweenObjects)
+		gameObject.transform.Translate(Vector3.forward * Time.deltaTime * movementSpeed);
 }
 else
 {
-	movementVector.x = 0;
-	movementVector.y = 0;
-	movementVector.z = 0;
+	Destroy(gameObject);
 }
-}
-else{
-Destroy(gameObject);
-}
-
-
-gameObject.transform.Translate(movementVector);
 
 }
